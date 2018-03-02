@@ -1,5 +1,7 @@
-<%= form_tag root_path do %>
+<%= form_tag search_path, remote: true do %>
   <%= text_field_tag 'location', nil, placeholder: 'Location' %>
 
   <%= submit_tag 'Gimme the weather!' %>
 <% end %>
+
+<div id="weather-details"></div>
