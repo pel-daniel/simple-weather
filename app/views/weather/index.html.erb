@@ -1,5 +1,5 @@
 <%= form_tag search_path, remote: true do %>
-  <%= text_field_tag 'location', nil, placeholder: 'Location' %>
+  <%= text_field_tag 'location', nil, placeholder: 'Location', autofocus: true %>
 
   <%= submit_tag 'Gimme the weather!' %>
 <% end %>
