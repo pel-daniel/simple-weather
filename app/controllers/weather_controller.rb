@@ -3,6 +3,6 @@ class WeatherController < ApplicationController
   end
 
   def search
-    @location = params[:location]
+    @weather = OpenWeatherService.get_weather(params[:location])
   end
 end
