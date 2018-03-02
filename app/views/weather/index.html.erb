@@ -1,9 +1,23 @@
-<%= form_tag search_path, remote: true, class: 'form-inline' do %>
-  <div class="form-group">
-    <%= text_field_tag 'location', nil, placeholder: 'Location', autofocus: true, class: 'form-control' %>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+
+    <%= form_tag search_path, remote: true, class: 'form-inline' do %>
+      <div class="form-group">
+        <%= text_field_tag 'location', nil, placeholder: 'Location', autofocus: true, class: 'form-control' %>
+      </div>
+
+      <%= button_tag 'Gimme the weather!',
+        class: 'btn btn-primary',
+        data: {
+          disable_with: "<i class='fa fa-spinner fa-spin'></i> Loading..."
+        }
+      %>
+    <% end %>
+
   </div>
 
-  <%= submit_tag 'Gimme the weather!', class: 'btn btn-primary' %>
-<% end %>
+  <div class="col-md-6 col-md-offset-3">
+    <div id="weather-details"></div>
+  </div>
 
-<div id="weather-details"></div>
+</div>
