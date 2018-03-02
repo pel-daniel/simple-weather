@@ -6,5 +6,8 @@ class OpenWeatherService
   def self.get_weather(city)
     response_string = open("#{BASE_URL}&q=#{city}").read
     JSON.parse(response_string)
+
+  rescue OpenURI::HTTPError
+    { error: 'not-found' }
   end
 end
