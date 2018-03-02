@@ -1,1 +1,31 @@
-The temperature is <%= weather['main']['temp'] %>!
+<% if weather['main'] %>
+
+  <p class="lead text-center">
+    <%= weather['main']['temp'] %>°C
+  </p>
+
+  <p class="text-center">
+    <%= weather['weather'][0]['main'] %>
+  </p>
+
+  <dl class="dl-horizontal">
+    <dt>Humidity</dt>
+    <dd><%= weather['main']['humidity'] %>%</dd>
+
+    <dt>Pressure</dt>
+    <dd><%= weather['main']['pressure'] %></dd>
+
+    <dt>Min temperature</dt>
+    <dd><%= weather['main']['temp_min'] %>°C</dd>
+
+    <dt>Max temperature</dt>
+    <dd><%= weather['main']['temp_max'] %>°C</dd>
+  </dl>
+
+<% else %>
+
+  <p class="lead text-center">
+    I don't know that location 😢
+  </p>
+
+<% end %>
