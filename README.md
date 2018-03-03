@@ -1,24 +1,9 @@
-# README
+# SimpleWeather
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+With more time, I would improve:
+- Over-all design of the site, probably remove Bootstrap and code custom CSS
+- Add some icons, like [Weather Icons](https://erikflowers.github.io/weather-icons/)
+- Make sure the site looks good in different screen sizes
+- Cache the API responses
+- Add an autocomplete for the `location` input with Google Places API
+- Add option to select between Celcius and Fahrenheit degrees
